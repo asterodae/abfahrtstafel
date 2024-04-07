@@ -1,0 +1,203 @@
+
+
+body {
+    background-color: white;
+    margin: 0;
+    font-family: 'Inter Tight', Helvetica, sans-serif
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.strikethrough {
+    text-decoration: line-through 4px;
+}
+
+.remarks {
+    font-weight: 1000;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    margin-left: 15px;
+    padding: 2.5px 8px;
+}
+
+#clock {
+    z-index: 999;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    text-align: right;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+            .blink {
+   animation: blink 1s infinite;
+   animation-fill-mode: both;
+   }
+
+@keyframes blink {
+   0% { opacity: 0 }
+   50% { opacity: 1 }
+   100% { opacity: 0 }
+   }
+
+input {
+    font-size: 32px;
+    border: none;
+    border-bottom: 3px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    font-family: 'Inter Tight', Helvetica, sans-serif
+  }
+
+#delay {
+    color: green;
+}
+
+#searchButton {
+    font-size: 28px;
+    cursor: default;
+}
+
+#locationButton {
+    font-size: 28px;
+    cursor: default;
+}
+
+#closeButton {
+    font-size: 28px;
+    cursor: default;
+}
+
+#title {
+    width: 100%;
+    height: 15%;
+    font-weight: bold;
+    font-size: 32px;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+}
+
+.product {
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+}
+
+#regional {
+    background-color: red;
+}
+
+#bus {
+    background-color: purple;
+}
+
+#suburban {
+    background-color: green;
+}
+
+#regionalExp { /* warum ist nen flixtrain regionalExp????? */
+    background-color: green;
+}
+
+#tram {
+    background-color: red;
+}
+
+#subway {
+    background-color: darkblue;
+}
+
+#nationalExpress {
+    background-color: gray;
+}
+
+#national {
+    background-color: gray;
+}
+
+#taxi {
+    background-color: #EED202;
+    color: black;
+}
+
+select {
+    direction: rtl;
+    width:100%;
+    border-radius: 0;
+    background-color: lightgray;
+    text-align: left;
+    padding-left: 50px;
+    font-family: 'Inter Tight', Helvetica, sans-serif;
+    border: none;
+    height: 5%;
+    font-size: 24px;
+    z-index:999;
+}
+
+select option{
+    direction:ltr;
+  }
+
+  th.info {
+    border: none;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: normal;
+    padding-left: 65px;
+  }
+
+.time {
+    text-align: right;
+    border-collapse: collapse;
+    width: 100%;
+    height: 5%;
+    background-color: orange;
+    font-size: 24px;
+    color: white;
+}
+
+td {
+    padding-left: 65px;
+}
+
+table#departures-table {
+    width:100%;
+    text-align: left;
+    border-collapse: collapse;
+    font-size: 32px;
+    height: 80%;
+    table-layout:fixed;
+}
+
+tr.header {
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 12px;
+}
+
+tr.transit {
+    color: black;
+    font-weight: normal;
+    background-color: white;
+    padding: 5px;
+    height:calc(100%/5);
+}
+
+table#departures-table td:nth-of-type(1) {width:125px;}/*Setting the width of column 1.*/
+
+
+td.abfahrt {
+    text-align: center;
+}
