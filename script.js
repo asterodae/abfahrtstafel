@@ -2,6 +2,7 @@ function startTime() {
   const today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
+  h = checkTime(h);
   m = checkTime(m);
   document.getElementById('clock').innerHTML =  h + '<span class="blink">:</span>' + m;
   setTimeout(startTime, 1000);
