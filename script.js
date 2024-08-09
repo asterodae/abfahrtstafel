@@ -120,7 +120,7 @@ locationButton.addEventListener("click", function() {
       if(!departure.when) {
         aktuelleZeit = "";
       } else {
-        aktuelleZeit = new Date(departure.plannedWhen).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        aktuelleZeit = new Date(departure.when).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       }
 
       if(!departure.cancelled) {
