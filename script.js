@@ -95,35 +95,35 @@ locationButton.addEventListener("click", function() {
     // Check if data is an array, otherwise wrap it in a single-element array
     const departures = Array.isArray(data) ? data : [data];
   
-    departures.forEach(departure => {
+    departures.forEach(departures => {
       const tableRow = document.createElement("tr");
       tableRow.setAttribute("class", "transit");
 
-      const delayMinute = new Date(departure.when).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      const departureTime = new Date(departure.plannedWhen).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      const direction = departure.direction;
-      const product = departure.line.product;
-      const lineNumber = departure.line.name;
+      const delayMinute = new Date(departures.when).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const departureTime = new Date(departures.plannedWhen).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const direction = departures.direction;
+      const product = departures.line.product;
+      const lineNumber = departures.line.name;
 
-      if(!departure.cancelled) {
+      if(!departures.cancelled) {
         remarksText = "";
       } else {
         remarksText = '<span class="remarks">Fahrt fällt aus.</span>'
       }
 
-      if(!departure.platform) {
+      if(!departures.platform) {
         gleisNummer = "";
       } else {
-        gleisNummer = '<br>Abfahrt auf <span class="semibold">Gleis ' + departure.platform + ".";
+        gleisNummer = '<br>Abfahrt auf <span class="semibold">Gleis ' + departures.platform + ".";
       }
 
-      if(!departure.when) {
+      if(!departures.when) {
         aktuelleZeit = "";
       } else {
-        aktuelleZeit = new Date(departure.when).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        aktuelleZeit = new Date(departures.when).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       }
 
-      if(!departure.cancelled) {
+      if(!departures.cancelled) {
         lineDeparture = ' <span class="semibold">' + lineNumber + '</span> nach <span class="semibold">' + direction + '</span>';
       } else {
         lineDeparture = ' <span class="strikethrough"><span class="semibold">' + lineNumber + '</span> nach <span class="semibold">' + direction + '</span></span>'
