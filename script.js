@@ -27,7 +27,7 @@ locationButton.addEventListener("click", function() {
       function showStopsOnMap(position) {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        const locationUrl = `https://cors.elchingen.eu/https://v5.db.transport.rest/stops/nearby?latitude=${latitude}&longitude=${longitude}`;
+        const locationUrl = `https://v6.db.transport.rest/stops/nearby?latitude=${latitude}&longitude=${longitude}`;
         if(!inputField.value) {
           fetch(locationUrl)
             .then(response => response.json())
@@ -39,7 +39,7 @@ locationButton.addEventListener("click", function() {
 
   searchButton.addEventListener("click", function() {
     const input = inputField.value;
-    const url = `https://v5.db.transport.rest/locations?query=${input}&results=5&fuzzy=true`;
+    const url = `https://v6.db.transport.rest/locations?query=${input}&results=5&fuzzy=true`;
 
   if(input != undefined) {
     fetch(url)
@@ -80,7 +80,7 @@ locationButton.addEventListener("click", function() {
   
   function getDepartures(event) {
     const selectedStopId = event.target.value;
-    const url = `https://v5.db.transport.rest/stops/${selectedStopId}/departures?results=5&duration=60&language=de`;
+    const url = `https://v6.db.transport.rest/stops/${selectedStopId}/departures?results=5&duration=60&language=de`;
   
     fetch(url)
       .then(response => response.json())
